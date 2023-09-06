@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const path = require('path')
 var pg = require('pg');
 const db= require('./db-config')
-const pgp = require('pg-promise')()
 const app = express()
 
 
@@ -21,14 +20,14 @@ const ClientClass = pg.Client
 const pgUrl = "postgres://test_jp4h_user:pH9ILgSC4BrVUXkrLmootQ8NhXa4R9KR@dpg-cjs7et8jbais73d8o280-a/test_jp4h"
 const client  = new ClientClass(pgUrl)
 
-app.get('/getdata',async (request,response)=>{
+app.get('/getdata', (request,response)=>{
 
-      db.query('SELECT * FROM users ordered by user_id asc ', [], (error, results) => {
+      db.pool.query('SELECT * FROM users order by user_id asc ', async (error, results) => {
         if (error) {
           throw error;
         }
-    console.log(results.rows)
-         response.status(200).json(results.rows);
+    console.log(results.rows[0])
+         response.status(200).json(results.rows[0]);
     })
 
 

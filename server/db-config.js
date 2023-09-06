@@ -9,6 +9,7 @@ const pool = new Pool({
   password: 'pH9ILgSC4BrVUXkrLmootQ8NhXa4R9KR',
   host: 'singapore-postgres.render.com',
   database: 'test_jp4h',
+  ssl: true
   
   
   
