@@ -13,7 +13,7 @@ function App() {
 
 
 
-<button> get data</button>
+<button onClick={getDataF}> get data</button>
     </div>
   );
 }
