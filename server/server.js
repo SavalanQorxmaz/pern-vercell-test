@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname,'public')))
 
 const ClientClass = pg.Client
 
-const pgUrl = "postgres://test_jp4h_user:pH9ILgSC4BrVUXkrLmootQ8NhXa4R9KR@dpg-cjs7et8jbais73d8o280-a/test_jp4h"
+const pgUrl = "postgres://test_jp4h_user:pH9ILgSC4BrVUXkrLmootQ8NhXa4R9KR@dpg-cjs7et8jbais73d8o280-a.singapore-postgres.render.com/test_jp4h"
 const client  = new ClientClass(pgUrl)
 
 app.get('/getdata',async (request,response)=>{
