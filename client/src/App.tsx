@@ -7,7 +7,7 @@ function App() {
   const getDataF = async ()=>{
     axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
     axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-    await axios.post('https://localhost:9000/getdata',{
+    await axios.post('/getdata',{
 
     })
     .then(res=>console.log(res))
