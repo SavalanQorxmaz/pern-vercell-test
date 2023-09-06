@@ -5,10 +5,10 @@ var pg = require('pg');
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  user: 'gpbwkhjw',
-  password: 'Rn9apFx0yItewZi2FoDOUXZHus50C7sH',
-  host: 'berry.db.elephantsql.com',
-  database: 'gpbwkhjw',
+  user: 'test_jp4h_user',
+  password: 'pH9ILgSC4BrVUXkrLmootQ8NhXa4R9KR',
+  host: 'singapore-postgres.render.com',
+  database: 'test_jp4h',
   
   
   
