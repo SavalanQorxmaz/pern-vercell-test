@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname,'public')))
 
 
 
-app.get('/getdata',async (request,response)=>{
+app.post('/getdata',async (request,response)=>{
 
     console.log(request.body)
 
