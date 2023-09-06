@@ -23,24 +23,24 @@ const client  = new ClientClass(pgUrl)
 
 app.get('/getdata',async (request,response)=>{
 
-    //   dbp.query('SELECT * FROM users ordered by user_id asc ', [], (error, results) => {
-    //     if (error) {
-    //       throw error;
-    //     }
-    // console.log(results.rows)
-    //      response.status(200).json(results.rows);
-    // })
+      db.query('SELECT * FROM users ordered by user_id asc ', [], (error, results) => {
+        if (error) {
+          throw error;
+        }
+    console.log(results.rows)
+         response.status(200).json(results.rows);
+    })
 
 
-   try{
-    await client.connect()
-    console.log('connected')
-       response.status(200).json('connected');
-   }
-   catch(error){
-    console.log('error')
-       response.status(200).json('error');
-   }
+   // try{
+   //  await client.connect()
+   //  console.log('connected')
+   //     response.status(200).json('connected');
+   // }
+   // catch(error){
+   //  console.log('error')
+   //     response.status(200).json('error');
+   // }
    
    
 
