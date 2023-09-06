@@ -35,9 +35,11 @@ app.get('/getdata',async (request,response)=>{
    try{
     await client.connect()
     console.log('connected')
+       response.status(200).json('connected);
    }
    catch(error){
     console.log('error')
+       response.status(200).json('error);
    }
    
    
